@@ -28,6 +28,7 @@
         <li> <a href="#" title="Sign Up">Sign Up</a> </li>
         <li> <a href="#" title="Contact">Contact</a> </li>
         <li> <a href="#" title="Careers">Careers</a> </li>
+        <li> <a href="https://google.com" title="Careers" id="google-link-id">Google</a> </li>
       </ul>
     </nav>
   </header>
@@ -155,7 +156,7 @@
 
   <section>
     <h1 class="other-class">Forms</h1>
-    <form>
+    <form action="testingHtmlPage2.html">
       <fieldset>
         <!--
         Every fieldset must contain a legend. IE barfs if it's not there.
@@ -177,7 +178,7 @@
 
         <div>
           <label for="first-name">First Name</label>
-          <input type="text" id="first-name"/>
+          <input type="text" id="first-name" name="some_input_name" value="John"/>
         </div>
 
         <div>
@@ -193,7 +194,7 @@
 
         <div>
           <label for="gender">Dropdown</label>
-          <select>
+          <select id="option-element">
             <option>Option 1</option>
             <option>Option 2</option>
             <option>Option 3</option>
@@ -224,7 +225,7 @@
         </div>
 
         <div>
-          <input type="submit" value="Submit"/>
+          <input type="submit" value="Submit" id="submit-button"/>
         </div>
 
       </fieldset>
@@ -432,6 +433,10 @@
       <address>email@email.com</address>
     </footer>
   </section>
-
+  <script>
+    setTimeout(()=>{
+      document.getElementById('first-name').value= "Adam";
+    },3000);
+  </script>
 </body>
 </html>
